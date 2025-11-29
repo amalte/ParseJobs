@@ -1,5 +1,7 @@
 import json
 
+import localLLM
+
 keywords = ["junior", "nybörjare"]
 
 
@@ -14,7 +16,7 @@ def clean_json(data):
     cleaned_data = []
     for entry in data:
         description = entry["jobDescription"]
-        if any(keyword in description for keyword in keywords):
+        if localLLM.isJuniorJob(description):
             entry["viewJobLink"] = "https://se.indeed.com" + entry["viewJobLink"]
             cleaned_data.append(entry)
 
