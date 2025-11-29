@@ -25,5 +25,3 @@ def clean_json(data):
         print(job["viewJobLink"])
 
 
-if __name__ == '__main__':
-    clean_json(parse_jsonfile("extractedJobs.json"))
