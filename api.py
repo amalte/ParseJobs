@@ -24,8 +24,7 @@ alex.johnson@example.com
 """
 
 model = "mistral"  # or llama3, qwen2, deepseek, etc.
-job_description = """PUT YOUR SCRAPED INDEED JOB DESCRIPTION HERE"""
-cover_letter = """PUT YOUR BASIC COVER LETTER HERE"""
+
 
 prompt = f"""
 You are an expert career writer and hiring manager. Rewrite the following cover letter
