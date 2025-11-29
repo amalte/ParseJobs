@@ -1,0 +1,31 @@
+{
+  "sender_name": "Your Full Name",
+  "sender_address": "123 Your Street Address",
+  "sender_city": "City, State ZIP Code",
+  "sender_phone": "+1 (555) 123-4567",
+  "sender_email": "your.email@example.com",
+  
+  "date": "December 1, 2025",
+  
+  "recipient_name": "Hiring Manager Name",
+  "recipient_title": "Position Title (e.g., Hiring Manager, HR Director)",
+  "company_name": "Company Name",
+  "company_address": "Company Street Address",
+  "company_city": "City, State ZIP Code",
+  
+  "subject": "Application for [Position Title] Position",
+  
+  "salutation": "Dear [Mr./Ms./Dr.] [Last Name],",
+  
+  "body": [
+    "Opening paragraph: State the position you're applying for and where you found it. Include a brief statement about why you're interested and what makes you a strong candidate.",
+    
+    "Second paragraph: Highlight your relevant experience and qualifications. Use specific examples and achievements that demonstrate your abilities. Connect your skills to the job requirements.",
+    
+    "Third paragraph: Explain why you're interested in this specific company. Show that you've researched the organization and understand their mission, values, or recent accomplishments. Explain how you can contribute to their goals.",
+    
+    "Closing paragraph: Express enthusiasm for the opportunity to interview. Thank them for their time and consideration. Include a call to action (e.g., 'I look forward to discussing how I can contribute to your team')."
+  ],
+  
+  "closing": "Sincerely,"
+}
