@@ -10,6 +10,7 @@ load_dotenv()  # read .env file
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 MODEL = os.getenv("LLM_MODEL")
 
+
 def isJuniorJob(job_description):
     payload = {
         "model": MODEL,

@@ -3,14 +3,14 @@ PDF Cover Letter Generator
 Creates a professional-looking cover letter PDF from text input.
 """
 
-from reportlab.lib.pagesizes import letter, A4
+import json
+from datetime import datetime
+
+from reportlab.lib.enums import TA_LEFT, TA_JUSTIFY
+from reportlab.lib.pagesizes import letter
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import inch
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
-from reportlab.lib.enums import TA_LEFT, TA_RIGHT, TA_JUSTIFY
-from reportlab.pdfgen import canvas
-from datetime import datetime
-import json
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 
 
 def create_cover_letter_pdf(data, output_filename="cover_letter.pdf"):
@@ -168,8 +168,7 @@ def load_from_json(json_file):
         return json.load(f)
 
 
-# Example usage
-if __name__ == "__main__":
+def create_example_cover_letter():
     # Example data structure
     example_data = {
         "sender_name": "John Doe",

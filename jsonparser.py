@@ -1,8 +1,6 @@
 import json
-
 import localLLM
-
-keywords = ["junior", "nybörjare"]
+import utils
 
 
 def parse_jsonfile(fileName):
@@ -12,16 +10,23 @@ def parse_jsonfile(fileName):
     return data
 
 
-def clean_json(data):
-    cleaned_data = []
-    for entry in data:
-        description = entry["jobDescription"]
+def clean_json(jobs):
+    """
+    Extracts jobs that are of junior level and discards senior level jobs.
+    """
+    cleaned_jobs = []
+    nr_jobs_to_check = 5
+    for job in jobs[:nr_jobs_to_check]:
+        description = job["jobDescription"]
+        print(description)
+        print(f"The text is swedish: {utils.isSwedishText(description)}")
+
         if localLLM.isJuniorJob(description):
-            entry["viewJobLink"] = "https://se.indeed.com" + entry["viewJobLink"]
-            cleaned_data.append(entry)
+            job["viewJobLink"] = "https://se.indeed.com" + job["viewJobLink"]
+            cleaned_jobs.append(job)
 
     # Print all job links
-    for job in cleaned_data:
+    for job in cleaned_jobs:
         print(job["viewJobLink"])
 
 
